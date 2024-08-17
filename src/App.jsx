@@ -12,7 +12,7 @@ function App() {
 
   // Fetching data from the json
   useEffect(() => {
-    fetch(" http://localhost:3000/bots ")
+    fetch(" https://bot-battlr-zvrt.onrender.com/bots ")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network respons not okay");
@@ -44,7 +44,7 @@ function App() {
 
   // Deleting bots from an army
   const deleteBot = (bot) => {
-    fetch(`http://localhost:3000/bots/${bot.id}`, {
+    fetch(`https://bot-battlr-zvrt.onrender.com/bots/${bot.id}`, {
       method: "DELETE",
     }).then(() => {
       setArmy(army.filter((b) => b.id !== bot.id));
