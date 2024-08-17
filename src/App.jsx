@@ -12,7 +12,7 @@ function App() {
 
   // Fetching data from the json
   useEffect(() => {
-    fetch(" https://bot-battlr-zvrt.onrender.com/bots ")
+    fetch(" https://deploy-ruddy-three.vercel.app/bots ")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network respons not okay");
@@ -44,7 +44,7 @@ function App() {
 
   // Deleting bots from an army
   const deleteBot = (bot) => {
-    fetch(`https://bot-battlr-zvrt.onrender.com/bots/${bot.id}`, {
+    fetch(`https://deploy-ruddy-three.vercel.app/bots/${bot.id}`, {
       method: "DELETE",
     }).then(() => {
       setArmy(army.filter((b) => b.id !== bot.id));
