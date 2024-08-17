@@ -12,7 +12,7 @@ function App() {
 
   // Fetching data from the json
   useEffect(() => {
-    fetch(" https://deploy-ruddy-three.vercel.app/bots ")
+    fetch(" http://localhost:3000/bots ")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network respons not okay");
@@ -44,7 +44,7 @@ function App() {
 
   // Deleting bots from an army
   const deleteBot = (bot) => {
-    fetch(`https://deploy-ruddy-three.vercel.app/bots/${bot.id}`, {
+    fetch(`http://localhost:3000/bots/${bot.id}`, {
       method: "DELETE",
     }).then(() => {
       setArmy(army.filter((b) => b.id !== bot.id));
