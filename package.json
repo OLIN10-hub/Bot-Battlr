@@ -1,12 +1,9 @@
 {
-  "homepage":"https://OLIN10-hub.github.io/Bot-Battlr",
   "name": "botbattle",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "predeploy":"npm run buld",
-    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
